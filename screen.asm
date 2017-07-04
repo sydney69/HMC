@@ -34,3 +34,21 @@ rts
 	lda #&13
 	jsr osbyte
 rts
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\			cyan_background
+\\\\	changes background colour from black(0) to cyan(6)
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+.cyan_background
+	;set background to colour 6 -vdu 18,133
+	lda #18
+	jsr oswrch
+	lda #0
+	jsr oswrch
+	lda #134
+	jsr oswrch
+	;clg
+	lda #16
+	jsr oswrch
+	rts

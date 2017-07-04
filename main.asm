@@ -6,16 +6,7 @@ ORG $2000
 
 .start
 	jsr setup_256_screen
-	;set background to colour 6 -vdu 18,133
-	lda #18
-	jsr oswrch
-	lda #0
-	jsr oswrch
-	lda #134
-	jsr oswrch
-	;clg
-	lda #16
-	jsr oswrch
+	jsr cyan_background
 	
 	.loop
 		jsr vsync
