@@ -11,36 +11,34 @@ ORG $2000
 	.loop
 		jsr vsync
 		
+		PLOTSPRITE chicken
+		PLOTSPRITE chick
 		PLOTSPRITE pig
 		
-;		lda #<pig
-;		sta $70
-;		lda #>pig
-;		sta $71
-;		jsr PlotSprite
-		jsr checkkeys
 		
-		
-		
-		
+		jsr checkkeys		
 	jmp loop	
 rts
+
 
 INCLUDE "keyboard.asm"
 INCLUDE "screen.asm"
 INCLUDE "plotsprite.asm"
 
 
-
-
-
-
 .GameSprites
 	INCBIN "sprites.bin"
 .pig
 	equb 0,20,128,0 ; id of sprite, X nd Y Pos,horizontal count
+	
+.chicken
+	equb 2,40,200,0 ; id of sprite, X nd Y Pos,horizontal count
+.chick
+	equb 5,34,200,0 ; id of sprite, X nd Y Pos,horizontal count
 
-.step
-	equb 1
-	.end
+
+;.step
+;	equb 1
+
+.end
 SAVE "MAIN",start,end
