@@ -1,4 +1,0 @@
-#!/bin/sh
-beebasm -i main.asm -do disk.ssd
-wine "c:\Program Files (x86)\BeebEm\BeebEm.exe" disk.ssd
-
