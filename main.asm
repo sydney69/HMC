@@ -10,11 +10,14 @@ ORG $2000
 	
 	.loop
 		jsr vsync
-		lda #<pig
-		sta $70
-		lda #>pig
-		sta $71
-		jsr PlotSprite
+		
+		PLOTSPRITE pig
+		
+;		lda #<pig
+;		sta $70
+;		lda #>pig
+;		sta $71
+;		jsr PlotSprite
 		jsr checkkeys
 		
 		

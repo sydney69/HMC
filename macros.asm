@@ -5,6 +5,14 @@ MACRO MODE val
    jsr oswrch
 ENDMACRO
  
+MACRO PLOTSPRITE spr
+	lda #<spr
+	sta $70
+	lda #>spr
+	sta $71
+	jsr PlotSprite
+ENDMACRO 
+ 
 MACRO lsr3
    ; shifts the accumulator left parameter 1 number of times
    lsr A
