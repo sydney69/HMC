@@ -32,7 +32,7 @@ ORG $2000
 	jmp loop	
 rts
 
-INCLUDE "keyboad.asm"
+INCLUDE "keyboard.asm"
 INCLUDE "screen.asm"
 INCLUDE "plotsprite.asm"
 
